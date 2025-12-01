@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffffff 0%, #eef2ff 100%);
+    min-height: 100vh;
+    font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+    color: #1f2937;
+    line-height: 1.6;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+    animation: slideUpPage 0.9s ease-out;
+}
+
+@keyframes slideUpPage {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #d7dce3;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+}
+
+.nav-brand {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #111827;
+    text-decoration: none;
+}
+
+.nav-menu a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #4b5563;
+    margin-left: 25px;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+.page-wrapper {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigbox {
+    width: 95%;
+    max-width: 1000px;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 50px 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    z-index: 10;
+    position: relative;
+    display:flex;
+    flex-direction:column;
+}
+#contacttext {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #07061b;       /* Indigo color */
+    margin-bottom: 40px;  /* Adds space between the title and the picture */
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    line-height: 1.2;
+}
+.contentpage {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+    width: 100%;
+}
+
+#contentpic {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 35px;
+    gap: 20px;
+    align-items: center;
+}
+
+#fb, #ig, #gm {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+#fb:hover, #ig:hover, #gm:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+.deco-box {
+    position: absolute;
+    border: 4px solid white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    z-index: 1;
+    width: 180px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.deco-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.deco-box:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+    z-index: 15;
+}
+
+.pos-1 { 
+    top: -50px;    
+    left: 0; 
+    transform: rotate(-6deg); 
+    width: 160px; 
+}
+
+.pos-2 { 
+    bottom: -40px; 
+    left: 20px; 
+    transform: rotate(8deg); 
+    width: 160px; 
+}
+
+.pos-3 { 
+    top: -20px;    
+    right: 0; 
+    transform: rotate(-7deg); 
+    width: 170px; 
+}
+
+.pos-4 { 
+    bottom: 20px; 
+    right: -20px; 
+    transform: rotate(6deg); 
+    width: 150px; 
+}
+
+
+.pos-5 {
+    top: 40%;
+    left: -80px;
+    transform: rotate(-12deg);
+    width: 150px;
+}
+
+.pos-6 {
+    top: 30%;
+    right: 20px;
+    transform: rotate(8deg);
+    width: 160px;
+}
+
+.pos-7 {
+    bottom: -30px;
+    right: 80px;
+    transform: rotate(-9deg);
+    width: 160px;
+}
+
+.pos-8 {
+    top: 20%;
+    left: 50px;
+    transform: rotate(10deg);
+    width: 150px;
+}
+
+
+
+
+@media (max-width: 1300px) {
+    .deco-box { display: none; }
+}
+
+@media (max-width: 900px) {
+    .bigbox { padding: 30px; }
+    .contentpage { flex-direction: column; text-align: center; gap: 30px; }
+    .bio-text-group { align-items: center; }
+    #contentpic { width: 100%; max-width: 300px; height: 400px; }
+    #contact-title { font-size: 2rem; }
+}
